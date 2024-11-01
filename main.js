@@ -17,6 +17,8 @@ function createWindow() {
 app.whenReady().then(() => {
   ipcMain.handle("ping", () => "pong, pong");
 
+  ipcMain.handle("username", () => "Gusth");
+
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
   }
